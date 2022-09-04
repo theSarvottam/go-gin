@@ -13,3 +13,8 @@ var albums = []model.Album{
 func GetAlbums() []model.Album {
 	return albums
 }
+
+func SaveAlbum(a *model.Album) model.Album {
+	albums = append(albums, *a)
+	return *a
+}
